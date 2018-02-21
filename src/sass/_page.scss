@@ -1,0 +1,87 @@
+body, h1, h2, h3, h4, h5, h6, p, div, ol, li {
+	font-family: $type-sans;
+}
+
+a:link, a:visited {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+tbody th {
+	font-weight: 600;
+	text-align: left;
+}
+
+header{
+ .bg {
+		background: transparent url('images/providence-rhode-island-skyline.jpg') 0 50% no-repeat;
+		background-size: cover;
+		height: 25rem;
+		position: relative;
+	}
+	a:link, a:visited {
+		@extend %transition-all;
+		background-color: $black;
+		border-radius: 4px;
+		bottom: 4rem;
+		color: #fff;
+		margin-right: 2rem;
+		padding: 0 1rem;
+		position: absolute;
+		text-decoration: none;
+	}
+	a:hover {
+		background-color: $red;
+	}
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		span {
+			white-space: nowrap;
+		}
+	}
+	
+}
+@media (min-width: 640px) {
+ .bg {
+		height: 30rem;
+	}
+	header{
+		h1 {
+			font-size: 4rem;
+			padding: 0 2rem;
+		}
+	}
+}
+
+
+
+header .bg, footer, .section {
+	padding: 4rem 2rem;
+}
+
+footer {
+	background-color: $uriblue;
+	color: $white;
+	
+	a:link, a:visited {
+		color: $white;
+	}
+
+	.by {
+		padding: 2rem 0;
+		text-align: center;
+	}
+	.by a:not(last) {
+		padding-right: 3rem;
+	}
+
+}
+
+.data-info {
+	font-size: small;
+	font-style: italic;
+}
+

@@ -1,0 +1,239 @@
+.section {
+	margin-bottom: 3rem;
+	position: relative;
+	padding: 0;
+}
+
+.section h2 {
+	background-color: $blue;
+	color: #fff;
+	font-weight: 800;
+	left: -1rem;
+	margin-right: -3rem;
+	padding: 2rem 2rem;
+	position: relative;
+	top: -1rem;
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+	z-index: 3;
+}
+
+.section h3 {
+	border-radius: 4px;
+	color: $uriblue;
+	font-weight: 800;
+	margin: 0 1rem;
+	padding: 0 1rem;
+	text-shadow: 1px 1px 3px $white;
+}
+
+
+.metric {
+	position: relative;
+	a, a .score {
+		@extend %transition-all;
+	}
+}
+
+.first {
+	a .score {
+		background-color: $orange;
+	}
+	a:hover .score {
+		background-color: $lightorange;
+		color: $black;
+	}
+}
+.second {
+	a .score {
+		background-color: $green;
+	}
+	a:hover .score {
+		background-color: $lightgreen;
+		color: $black;
+	}
+}
+.third {
+	a .score {
+		background-color: $blue;
+	}
+	a:hover .score {
+		background-color: $lightblue;
+		color: $black;
+	}
+}
+.fourth {
+	a .score {
+		background-color: $purple;
+	}
+	a:hover .score {
+		background-color: $lightpurple;
+		color: $black;
+	}
+}
+.fifth {
+	a .score {
+		background-color: $red;
+	}
+	a:hover .score {
+		background-color: $lightred;
+		color: $black;
+	}
+}
+
+
+
+
+
+.at-a-glance {
+	.description {
+		background-size: cover;
+		background: transparent url('images/man-laptop.jpg') 50% 50% no-repeat;
+	}
+ .first {
+		left: 10em;
+		top: 4em;
+	}
+	.second {
+		left: -4em;
+		margin-top: -3em;
+	}
+	.third {
+		left: 12em;
+		margin-top: -11em;
+	}
+}
+
+
+.details {
+	&::after {
+		background-size: cover;
+		background: transparent url('images/west-warwick.jpg') 42.5% 65% no-repeat;
+		content: "";
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		width: 50%;
+		z-index: -1;
+	}
+
+	h2 {
+		background-color: $uriblue;
+		color: $white;
+	}
+	h3 {
+		color: $white;
+		background-color: $uriblue;
+		margin: 0;
+		padding: 1rem;
+		text-shadow: none;
+	}
+	
+ .first {
+		left: 8em;
+	}
+	.second {
+		left: -4em;
+		margin-top: -3em;
+	}
+	.third {
+		left: 12em;
+		margin-top: -8em;
+	}
+
+	.workforce {
+	 .first {
+			left: -1em;
+		}
+		.second {
+			left: 14em;
+			margin-top: -8em;
+		}
+		.third {
+			left: 2em;
+			margin-top: -3em;
+		}
+	}
+	.opportunities {
+	 .first {
+			left: 10em;
+		}
+		.second {
+			left: -1em;
+			margin-top: -3em;
+		}
+		.third {
+			left: 12em;
+			margin-top: -6em;
+		}
+		.fourth {
+			left: 0;
+			margin-top: -1em;
+		}
+		.fifth {
+			left: 14em;
+			margin-top: -6em;
+		}
+	}
+
+}
+
+
+
+.finances {
+	h2 {
+		background-color: $green;
+		color: $black;
+	}
+	.description {
+		background-size: auto 100%;
+		background-image: url("images/newport-bridge.jpg");
+		background-position: 20% 30%; 
+		background-repeat: no-repeat;
+	}
+ .first {
+		left: 10em;
+		top: 4em;
+	}
+	.second {
+		left: -6em;
+		margin-top: -3em;
+		top: -2em;
+		a .score {
+			background-color: $blue;
+		}
+		a:hover .score {
+			background-color: $lightblue;
+			color: $black;
+		}
+	}
+	.third {
+		left: 12em;
+		margin-top: -11em;
+	}
+}
+
+
+
+
+.demographics {
+	h2 {
+		background-color: $red;
+		color: $white;
+	}
+	.description {
+		background-size: auto 100%;
+		background-image: url("images/welder.jpg");
+		background-position: 60% 30%; 
+		background-repeat: no-repeat;
+	}
+	.charts {
+		margin-top: 5rem;
+	}
+	.chart {
+		margin-bottom: 1rem;
+	}
+
+}
+

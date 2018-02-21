@@ -1,0 +1,96 @@
+.section {
+	position: relative;
+}
+
+.section h2 {
+	background-color: $blue;
+	color: #fff;
+	font-weight: 800;
+	margin: -4rem -2rem 4rem;
+	padding: 2rem 2rem;
+}
+
+.section h3 {
+	border-radius: 4px;
+	color: $uriblue;
+	font-weight: 800;
+	margin: 0 1rem;
+	padding: 0 1rem;
+	text-shadow: 1px 1px 3px $white;
+}
+
+
+.overview {
+	h2 {
+		background-color: $uriblue;
+		color: $white;
+	}
+	&::after {
+	 @extend %transparent-background-image;
+		background-image: url('images/west-warwick.jpg');
+		background-position: 47% 50%;
+	  opacity: 0.2 !important;
+	}
+}
+@media (min-width: 640px) {
+	.overview::after {
+		background-position: 10% 50%;
+	}
+}
+
+
+.performance {
+	h2 {
+		background-color: $orange;
+		color: $black;
+	}
+	&::after {
+		@extend %transparent-background-image;
+		background-image: url('images/man-laptop.jpg');
+		background-position: 50% 20%;
+	}
+}
+@media (min-width: 640px) {
+	.performance::after {
+		background-position: 0 20%;
+	}
+}
+
+
+.finances {
+	h2 {
+		background-color: $orange;
+		color: $black;
+	}
+	&::after {
+		@extend %transparent-background-image;
+		background-image: url('images/newport-bridge.jpg');
+		background-position: 30% 30%;
+	}
+}
+@media (min-width: 640px) {
+	.finances::after {
+		background-position: 50% 30%;
+	}
+}
+
+.demographics {
+	h2 {
+		background-color: $uriblue;
+		color: $white;
+	}
+	&::after {
+		@extend %transparent-background-image;
+		background-image: url('images/welder.jpg');
+		background-position: 80% 50%;
+	}
+}
+@media (min-width: 640px) {
+	.demographics::after {
+		background-position: 0 50%;
+	}
+	.demographics .scorecard.big {
+		max-width: 15em;
+	}
+}
+
