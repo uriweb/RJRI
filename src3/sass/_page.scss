@@ -1,0 +1,57 @@
+body, h1, h2, h3, h4, h5, h6, p, div, ol, li {
+	font-family: $type-sans;
+}
+
+body {
+	background-color: $lightgrey;
+}
+
+header {
+	padding: 1rem; 
+}
+
+a:link, a:visited {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+tbody th {
+	font-weight: 600;
+	text-align: left;
+}
+
+h2 {
+	font-weight: 600;
+}
+
+
+.section {
+	margin: 0 1rem 4rem;
+}
+
+footer {
+	background-color: $uriblue;
+	color: $white;
+	padding: 1rem 1rem 3rem;
+	
+	a:link, a:visited {
+		color: $white;
+	}
+
+	.by {
+		padding: 2rem 0;
+		text-align: center;
+	}
+	.by a:not(last) {
+		padding-right: 3rem;
+	}
+
+}
+
+.data-info {
+	font-size: small;
+	font-style: italic;
+}
+
