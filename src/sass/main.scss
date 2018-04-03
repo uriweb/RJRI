@@ -33,7 +33,7 @@ $purple: #9012fe;
 $lightpurple: #ddb8fe; // also pretty pink, FWIW
 
 
-$link: #0047c2;
+$link: #507EBF;
 $linkhover: #003287;
 
 
@@ -42,12 +42,12 @@ $linkhover: #003287;
    FAWNTS
    ============================== */
 
-@import url("https://fonts.googleapis.com/css?family=Mukta+Mahee:400,600,800") all;
+@import 
+url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600") all;
 
-$type-sans: 'Mukta Mahee', Helvetica, sans-serif;
+$type-sans: 'Source Sans Pro', sans-serif;
 $type-serif: 'Georgia', serif;
 
-$maxtypewidth: 750px;
 
 
 /* ==============================
@@ -73,5 +73,4 @@ $maxtypewidth: 750px;
 
 @import 'page';
 @import 'scorecard';
-@import 'sections';
 

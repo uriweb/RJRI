@@ -1,9 +1,6 @@
 .scorecard {
-	background: rgba(255, 255, 255, .7);
-	border-radius: 2px;
-	box-shadow: 1px 1px 2px $midgrey;
 	margin: 2rem auto 2rem;
-	padding: 2rem;
+	padding: 2rem 1rem;
 	text-align: center;
 
 	.score {
@@ -54,11 +51,13 @@ a:link .scorecard {
 	text-decoration: underline;
 }
 a:hover .scorecard {
-	background: #ffffff;
-	color: $orange;
-	transform: scale(1.1);
+	background: #f5f9ff;
+	color: $black;
 }
 a:link .scorecard .score {
 	text-decoration: none;
 }
 
+.alt a:hover .scorecard {
+	background: #edf1f8;
+}
