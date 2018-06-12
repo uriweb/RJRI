@@ -69,68 +69,6 @@ function styles(done) {
 }
 
 
-// CSS concat, auto-prefix and minify
-// this is for an alternate stylesheet (2 options)
-gulp.task('styles2', styles);
-function styles2(done) {
-
-	var pkg = require('./package.json');
-	var banner = ['/**',
-  ' * <%= pkg.name %>',
-  ' * <%= pkg.description %>',
-  ' * @version v<%= pkg.version %>',
-  ' * @author <%= pkg.authorHuman %>',
-  ' * License: <%= pkg.license %>',
-  ' * License URI: <%= pkg.licenseURI %>',
-  '',
-  '*/',
-  ''].join('\n')
-
-
-	gulp.src('./src2/sass/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass(sassOptions).on('error', sass.logError))
-		.pipe(concat('style2.css'))
-		.pipe(postcss([ autoprefixer() ]) )
-		.pipe(header(banner, { pkg : pkg } ))
-		.pipe(sourcemaps.write('./map2'))
-		.pipe(gulp.dest('.'));
-
-  done();
-  //console.log('styles2 ran');
-}
-
-// CSS concat, auto-prefix and minify
-// this is for an alternate stylesheet (2 options)
-gulp.task('styles3', styles);
-function styles3(done) {
-
-	var pkg = require('./package.json');
-	var banner = ['/**',
-  ' * <%= pkg.name %>',
-  ' * <%= pkg.description %>',
-  ' * @version v<%= pkg.version %>',
-  ' * @author <%= pkg.authorHuman %>',
-  ' * License: <%= pkg.license %>',
-  ' * License URI: <%= pkg.licenseURI %>',
-  '',
-  '*/',
-  ''].join('\n')
-
-
-	gulp.src('./src3/sass/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass(sassOptions).on('error', sass.logError))
-		.pipe(concat('style3.css'))
-		.pipe(postcss([ autoprefixer() ]) )
-		.pipe(header(banner, { pkg : pkg } ))
-		.pipe(sourcemaps.write('./map3'))
-		.pipe(gulp.dest('.'));
-
-  done();
-  //console.log('styles3 ran');
-}
-
 
 // minify new images
 gulp.task('images', images);
@@ -157,12 +95,6 @@ function watcher(done) {
 	// watch for CSS changes
 	gulp.watch('./src/sass/**/*', styles);
 
-	// watch for CSS changes
-	gulp.watch('./src2/sass/**/*', styles2);
-
-	// watch for CSS changes
-	gulp.watch('./src3/sass/**/*', styles3);
-
 	// watch for image changes
 	gulp.watch('./src/images/**/*', images);
 
@@ -170,7 +102,7 @@ function watcher(done) {
 }
 
 gulp.task( 'default',
-	gulp.parallel('images', 'scripts', 'styles', 'styles2', 'styles3', 'watcher', function(done){
+	gulp.parallel('images', 'scripts', 'styles', 'watcher', function(done){
 		done();
 	})
 );
