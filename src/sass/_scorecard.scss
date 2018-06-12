@@ -13,6 +13,8 @@
 		}
 	}
 
+
+
 	&.big {
 		font-size: 1.125em;
 		.score {
@@ -22,6 +24,10 @@
 	&.bleed {
 		max-width: 99% !important;
 	}
+}
+
+.section .cell a {
+	display: block;
 }
 
 @media (min-width: 640px) {
@@ -44,20 +50,40 @@
 	}
 }
 
-
-a:link .scorecard {
-	@extend %transition-all;
-	color: $black;
-	text-decoration: underline;
-}
-a:hover .scorecard {
-	background: #f5f9ff;
-	color: $black;
-}
 a:link .scorecard .score {
 	text-decoration: none;
 }
 
-.alt a:hover .scorecard {
-	background: #edf1f8;
+
+a .scorecard {
+	transition: background 0.2s ease-in-out;
 }
+
+a:link .scorecard {
+	color: $black;
+	text-decoration: underline;
+}
+a:hover .scorecard {
+	background-color: #edf1f8;
+}
+
+.alt a  .scorecard {
+	transition: none;
+
+}
+.alt a:link .scorecard {
+	background-color: #edf1f8;
+
+}
+.alt a:hover .scorecard {
+	background-color: #DFE5F0;
+}
+
+// 
+// .alt .scorecard {
+// 	background: #edf1f8;
+// }
+// .alt .scorecard:hover {
+// 	background: #ffffff;
+// }
+

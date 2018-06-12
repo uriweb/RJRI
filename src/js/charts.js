@@ -5,7 +5,7 @@
 					thousandsSep: ','
 			},
 			backgroundColor: 'rgba(255, 255, 255, 0)',
-			colors: ['#468ee5', '#7ed321', '#f8e71c', '#f6a623', '#d0011b', '#9012fe']
+			colors: ['#507EBE', '#D48F1E', '#7D0010', '#63A51A', '#570B9A', '#D6C818']
 	});
 
 
@@ -34,7 +34,9 @@
 			data: [652, 544684], 
 			index: 2
 		}],
-		xAxis: {categories: ['RJRI New Hires', '2015 RI Census']}, 
+		xAxis: {
+			categories: ['RJRI New Hires', '2015 RI Census'],
+		}, 
 		yAxis: {
 			labels: {enabled: false},
 			reversedStacks: false,
